@@ -5,14 +5,13 @@
  * @return {number}
  */
 var ladderLength = function (beginWord, endWord, wordList) {
-  if (wordList.length <= 2) return 0;
   let visited = new Map();
   let q = [];
   q.push([beginWord, 1]);
   visited.set(beginWord, true);
 
   while (q.length > 0) {
-    let adjList = new Map();
+    let adjList = new Set();
     const word = q[0][0];
     let distance = q[0][1];
     const nearestWord = beginWord.length - 1;
@@ -28,19 +27,15 @@ var ladderLength = function (beginWord, endWord, wordList) {
             count += 1;
           }
         }
-        if (adjList.has(count)) {
-          adjList.set(count, [...adjList.get(count), item]);
-        } else {
-          adjList.set(count, [item]);
+        if (count === nearestWord) {
+          adjList.add(item);
         }
       }
     }
-    if (adjList.has(nearestWord)) {
-      for (let item of adjList.get(nearestWord)) {
-        if (!visited.has(item)) {
-          q.push([item, distance + 1]);
-          visited.set(item, true);
-        }
+    for (let item of adjList) {
+      if (!visited.has(item)) {
+        q.push([item, distance + 1]);
+        visited.set(item, true);
       }
     }
   }
