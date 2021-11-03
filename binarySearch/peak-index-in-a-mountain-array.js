@@ -7,7 +7,6 @@ var peakIndexInMountainArray = function (arr) {
   let hi = arr.length - 1;
   while (lo <= hi) {
     let mid = Math.round(lo + (hi - lo) / 2);
-    console.log(mid);
     if (arr[mid] > arr[mid + 1] && arr[mid] > arr[mid - 1]) {
       return mid;
     } else if (arr[mid] < arr[mid + 1]) {
