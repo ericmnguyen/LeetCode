@@ -22,7 +22,6 @@ var slidingPuzzle = function (board) {
   visited.add(start);
 
   while (q.length) {
-    console.log('v', visited);
     let curr = q[0][0];
     let distance = q[0][1];
     q.shift();
