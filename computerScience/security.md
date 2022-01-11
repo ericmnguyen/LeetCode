@@ -19,6 +19,8 @@
 - Both sides of the message are assigned a pair of keys; a public key and a private key. The public key is what will be used to encrypt the message. The private key is for decrypting the message. The public key remains available to view by anyone who might wish to send a message. However, only the private key can decrypt the sent messages. While both keys are derived from factoring large prime numbers, the private key can not be derived from the public key.
 
 4. How HTTPS work?
+   https://howhttps.works/
+
 5. What happen during TLS Handshake?
 6. Why use symmetric encryption for exchanging data instead of asymmetric encryption?
 7. What is the use of client random and server random in TLS handshake?
