@@ -7,7 +7,7 @@
 
 2. Symmetric vs Asymmetric encryption?
 
-- Symmetric has both side(sender and receiver) share the <b>same key</b> to encrypt/decrypt the text fast
+- Symmetric has both side(sender and receiver) share the <b>same key</b> to encrypt/decrypt the text quickly
 
 - Asymmetric (aka public key cryptography). If public key used for encryption, private key will be used for decryption and otherwise. It's slow
 
@@ -22,12 +22,30 @@
    https://howhttps.works/
 
 5. What happen during TLS Handshake?
+
+- A process to ensure private communication between a browser and a server
+- There have 4 steps of the handshake: client's hello, server's hello, Client Key Exchange, Change Cipher spec
+
 6. Why use symmetric encryption for exchanging data instead of asymmetric encryption?
+
+- symmetric encryption is faster than asymmetric encryption
+
 7. What is the use of client random and server random in TLS handshake?
+
+- avoid replay attack: if there is no client random and server random, hacker capture the package and resend.
+
 8. What is CORS?
+
+- CORS is a mechanism to bypass Same origin policy(SOP).
+
 9. How to prevent SQL injection?
+
+- Use SQL parameters to distinguish between code and data
+
 10. How do you implement authentication?
+    Using a authenticated method such as JWT
 11. How JWT work? Pros & Cons? How to revoke JWT from server?
+   
 12. 2 users in diff location login with same JWT, how to warn user?
 13. Access token vs Refresh token
 14. https://github.com/alex/what-happens-when
